@@ -4,8 +4,8 @@ import numpy as np
 import soundfile as sf
 from pathlib import Path
 
-INPUT = "../data/lamptrim.wav"
-OUTPUT = "../outputs/lampmel.wav"
+INPUT = "../data/somebodyfull.wav"
+OUTPUT = "../outputs/somebodyfull.wav"
 
 Path("outputs").mkdir(exist_ok=True)
 
@@ -57,7 +57,7 @@ times = librosa.times_like(
 )
 
 np.savez(
-    "../outputs/lampmel.npz",
+    "../outputs/somebodyfull.npz",
     times=times,
     f0=clean_f0,
     voiced=valid_clean,
